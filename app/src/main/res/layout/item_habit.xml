@@ -1,85 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:paddingTop="8dp"
-    android:paddingBottom="16dp">
-
-    <!-- Habit name row -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:layout_marginBottom="8dp">
-
-        <TextView
-            android:id="@+id/habitName"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Morning Run"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:textColor="#1A1A2E"
-            android:fontFamily="sans-serif-medium"/>
-
-        <!-- Delete button -->
-        <ImageButton
-            android:id="@+id/deleteHabitBtn"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:src="@android:drawable/ic_menu_delete"
-            android:tint="#CCBBBBBB"
-            android:contentDescription="Delete habit"/>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp" app:cardCornerRadius="16dp"
+    app:cardElevation="1dp" app:cardBackgroundColor="#FFFFFF">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical" android:padding="14dp">
+        <TextView android:id="@+id/habitCheckBox"
+            android:layout_width="42dp" android:layout_height="42dp"
+            android:gravity="center" android:textSize="18sp" android:textColor="#FFFFFF"
+            android:textStyle="bold" android:background="@drawable/cb_outline"
+            android:layout_marginEnd="14dp"/>
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:orientation="vertical">
+            <TextView android:id="@+id/habitName" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:textSize="15sp"
+                android:textStyle="bold" android:textColor="#1C1C1E"
+                android:maxLines="2" android:layout_marginBottom="4dp"/>
+            <TextView android:id="@+id/habitStats" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:textSize="12sp" android:textColor="#8E8E93"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginStart="8dp">
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="vertical" android:gravity="center" android:layout_marginStart="3dp">
+                <com.habittracker.app.RadialProgressView android:id="@+id/p7d"
+                    android:layout_width="32dp" android:layout_height="32dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="7d" android:textSize="9sp" android:textColor="#8E8E93"
+                    android:layout_marginTop="2dp" android:gravity="center"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="vertical" android:gravity="center" android:layout_marginStart="3dp">
+                <com.habittracker.app.RadialProgressView android:id="@+id/p4w"
+                    android:layout_width="32dp" android:layout_height="32dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="4w" android:textSize="9sp" android:textColor="#8E8E93"
+                    android:layout_marginTop="2dp" android:gravity="center"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="vertical" android:gravity="center" android:layout_marginStart="3dp">
+                <com.habittracker.app.RadialProgressView android:id="@+id/p3m"
+                    android:layout_width="32dp" android:layout_height="32dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="3m" android:textSize="9sp" android:textColor="#8E8E93"
+                    android:layout_marginTop="2dp" android:gravity="center"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="vertical" android:gravity="center" android:layout_marginStart="3dp">
+                <com.habittracker.app.RadialProgressView android:id="@+id/p1y"
+                    android:layout_width="32dp" android:layout_height="32dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="1y" android:textSize="9sp" android:textColor="#8E8E93"
+                    android:layout_marginTop="2dp" android:gravity="center"/>
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
-
-    <!-- GitHub-style contribution grid -->
-    <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scrollbars="none"
-        android:layout_marginBottom="10dp">
-
-        <com.happyday.app.HabitGridView
-            android:id="@+id/habitGrid"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-    </HorizontalScrollView>
-
-    <!-- Bottom row: streak + today checkbox -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
-
-        <TextView
-            android:id="@+id/streakText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="🔥 3 day streak"
-            android:textSize="13sp"
-            android:textColor="#666666"/>
-
-        <CheckBox
-            android:id="@+id/todayCheck"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Done today"
-            android:textSize="13sp"
-            android:textColor="#667eea"
-            android:buttonTint="#667eea"/>
-    </LinearLayout>
-
-    <!-- Divider -->
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#F0F0F0"
-        android:layout_marginTop="8dp"/>
-
-</LinearLayout>
+</androidx.cardview.widget.CardView>
