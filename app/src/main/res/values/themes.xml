@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.HabitTracker" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Theme.HabitTracker" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimary">@color/brand_purple</item>
         <item name="colorPrimaryVariant">@color/brand_purple_dark</item>
         <item name="colorOnPrimary">@color/white</item>
@@ -8,11 +8,11 @@
         <item name="android:statusBarColor">#667eea</item>
     </style>
 
-    <style name="BottomSheetTheme" parent="Theme.Design.Light.BottomSheetDialog">
+    <style name="BottomSheetTheme" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
         <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
     </style>
 
-    <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+    <style name="BottomSheetStyle" parent="Widget.MaterialComponents.BottomSheet.Modal">
         <item name="android:background">@android:color/transparent</item>
     </style>
 </resources>
