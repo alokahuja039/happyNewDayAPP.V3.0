@@ -2,11 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:orientation="vertical" android:background="#F2F2F7">
-    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
         android:orientation="horizontal" android:gravity="center_vertical"
         android:paddingStart="20dp" android:paddingEnd="16dp"
         android:paddingTop="52dp" android:paddingBottom="12dp">
-        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+        <TextView
+            android:layout_width="0dp" android:layout_height="wrap_content"
             android:layout_weight="1" android:text="My Habits"
             android:textSize="28sp" android:textStyle="bold"
             android:textColor="#1C1C1E" android:fontFamily="sans-serif-black"/>
@@ -16,23 +19,29 @@
             android:src="@android:drawable/ic_input_add"
             android:tint="#FFFFFF" android:contentDescription="Add habit"/>
     </LinearLayout>
+
     <LinearLayout android:id="@+id/emptyHabits"
         android:layout_width="match_parent" android:layout_height="0dp"
         android:layout_weight="1" android:orientation="vertical"
         android:gravity="center" android:padding="40dp" android:visibility="gone">
-        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:text="🎯" android:textSize="64sp" android:layout_marginBottom="20dp"/>
-        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="&#x1F3AF;" android:textSize="64sp" android:layout_marginBottom="20dp"/>
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:text="No habits yet" android:textSize="22sp" android:textStyle="bold"
             android:textColor="#1C1C1E" android:layout_marginBottom="8dp"/>
-        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:text="Tap the + button above to start tracking your first habit."
-            android:textSize="15sp" android:textColor="#8E8E93" android:gravity="center"
-            android:lineSpacingExtra="4dp"/>
+            android:textSize="15sp" android:textColor="#8E8E93"
+            android:gravity="center" android:lineSpacingExtra="4dp"/>
     </LinearLayout>
+
     <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvHabits"
         android:layout_width="match_parent" android:layout_height="0dp"
-        android:layout_weight="1" android:paddingStart="16dp" android:paddingEnd="16dp"
+        android:layout_weight="1"
+        android:paddingStart="14dp" android:paddingEnd="14dp"
         android:paddingTop="8dp" android:paddingBottom="8dp"
         android:clipToPadding="false" android:visibility="gone"/>
 </LinearLayout>

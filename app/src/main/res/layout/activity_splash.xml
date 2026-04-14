@@ -1,52 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@drawable/gradient_bg">
-    <View android:layout_width="280dp" android:layout_height="280dp"
-        android:layout_gravity="top|end" android:layout_marginTop="-80dp"
-        android:layout_marginEnd="-80dp" android:alpha="0.12" android:background="@drawable/circle_deco"/>
-    <View android:layout_width="180dp" android:layout_height="180dp"
-        android:layout_gravity="bottom|start" android:layout_marginStart="-55dp"
-        android:layout_marginBottom="-55dp" android:alpha="0.08" android:background="@drawable/circle_deco"/>
-    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+
+    <View
+        android:layout_width="280dp" android:layout_height="280dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="-80dp" android:layout_marginEnd="-80dp"
+        android:alpha="0.12" android:background="@drawable/circle_deco"/>
+
+    <View
+        android:layout_width="180dp" android:layout_height="180dp"
+        android:layout_gravity="bottom|start"
+        android:layout_marginStart="-55dp" android:layout_marginBottom="-55dp"
+        android:alpha="0.08" android:background="@drawable/circle_deco"/>
+
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="match_parent"
         android:gravity="center" android:orientation="vertical" android:padding="40dp">
-        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:text="✨" android:textSize="52sp" android:layout_gravity="center"
-            android:layout_marginBottom="20dp"/>
-        <TextView android:id="@+id/splashGreeting" android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_gravity="center"
-            android:layout_marginBottom="2dp" android:fontFamily="sans-serif-light"
-            android:letterSpacing="0.05" android:textColor="#CCFFFFFF" android:textSize="20sp"/>
-        <TextView android:id="@+id/splashDay" android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_gravity="center"
-            android:layout_marginBottom="40dp" android:fontFamily="sans-serif-black"
+
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="&#x2728;" android:textSize="52sp"
+            android:layout_gravity="center" android:layout_marginBottom="20dp"/>
+
+        <TextView android:id="@+id/splashGreeting"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="center" android:layout_marginBottom="2dp"
+            android:fontFamily="sans-serif-light" android:letterSpacing="0.05"
+            android:textColor="#CCFFFFFF" android:textSize="20sp"/>
+
+        <TextView android:id="@+id/splashDay"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="center" android:layout_marginBottom="40dp"
+            android:fontFamily="sans-serif-black"
             android:textColor="#FFFFFF" android:textSize="54sp" android:textStyle="bold"/>
-        <androidx.cardview.widget.CardView android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:layout_marginBottom="36dp"
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
             app:cardBackgroundColor="#28FFFFFF" app:cardCornerRadius="20dp" app:cardElevation="0dp">
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:orientation="vertical" android:padding="24dp">
-                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                    android:text="\u201c" android:textColor="#80FFFFFF" android:textSize="40sp"
+                <TextView
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="&#x201C;" android:textColor="#80FFFFFF" android:textSize="36sp"
                     android:fontFamily="serif" android:layout_marginBottom="4dp"/>
-                <TextView android:id="@+id/splashQuote" android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:layout_marginBottom="12dp"
-                    android:gravity="center" android:lineSpacingExtra="4dp"
+                <TextView android:id="@+id/splashQuote"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp" android:gravity="center"
+                    android:lineSpacingExtra="4dp"
                     android:textColor="#FFFFFF" android:textSize="16sp" android:textStyle="italic"/>
-                <TextView android:id="@+id/splashAuthor" android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:fontFamily="sans-serif-light"
-                    android:gravity="end" android:textColor="#AAFFFFFF" android:textSize="13sp"/>
+                <TextView android:id="@+id/splashAuthor"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light" android:gravity="end"
+                    android:textColor="#AAFFFFFF" android:textSize="13sp"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
         <ProgressBar android:id="@+id/splashProgress"
             style="@style/Widget.AppCompat.ProgressBar.Horizontal"
             android:layout_width="match_parent" android:layout_height="5dp"
             android:layout_marginBottom="20dp" android:max="1000" android:progress="0"
             android:progressBackgroundTint="#33FFFFFF" android:progressTint="#FFFFFF"/>
-        <Button android:id="@+id/skipBtn" android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_gravity="center"
+
+        <Button android:id="@+id/skipBtn"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:background="@android:color/transparent"
-            android:text="Skip →" android:textColor="#AAFFFFFF" android:textSize="14sp"/>
+            android:text="Skip &#x2192;" android:textColor="#AAFFFFFF" android:textSize="14sp"/>
     </LinearLayout>
 </FrameLayout>

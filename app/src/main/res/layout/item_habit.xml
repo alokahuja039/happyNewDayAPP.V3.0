@@ -1,55 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent" android:layout_height="wrap_content"
-    android:layout_marginBottom="10dp" app:cardCornerRadius="16dp"
-    app:cardElevation="1dp" app:cardBackgroundColor="#FFFFFF">
-    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:orientation="horizontal" android:gravity="center_vertical" android:padding="14dp">
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="16dp" app:cardElevation="1dp"
+    app:cardBackgroundColor="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:padding="14dp">
+
         <TextView android:id="@+id/habitCheckBox"
             android:layout_width="42dp" android:layout_height="42dp"
-            android:gravity="center" android:textSize="18sp" android:textColor="#FFFFFF"
-            android:textStyle="bold" android:background="@drawable/cb_outline"
-            android:layout_marginEnd="14dp"/>
-        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+            android:gravity="center" android:textSize="18sp"
+            android:textColor="#FFFFFF" android:textStyle="bold"
+            android:background="@drawable/cb_outline"
+            android:layout_marginEnd="12dp"/>
+
+        <LinearLayout
+            android:layout_width="0dp" android:layout_height="wrap_content"
             android:layout_weight="1" android:orientation="vertical">
-            <TextView android:id="@+id/habitName" android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:textSize="15sp"
-                android:textStyle="bold" android:textColor="#1C1C1E"
-                android:maxLines="2" android:layout_marginBottom="4dp"/>
-            <TextView android:id="@+id/habitStats" android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:textSize="12sp" android:textColor="#8E8E93"/>
+            <TextView android:id="@+id/habitName"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:textSize="15sp" android:textStyle="bold"
+                android:textColor="#1C1C1E" android:maxLines="2"
+                android:layout_marginBottom="3dp"/>
+            <TextView android:id="@+id/habitStats"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:textSize="12sp" android:textColor="#8E8E93"/>
         </LinearLayout>
-        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginStart="8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:layout_marginStart="6dp">
+
             <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:orientation="vertical" android:gravity="center" android:layout_marginStart="3dp">
                 <com.habittracker.app.RadialProgressView android:id="@+id/p7d"
-                    android:layout_width="32dp" android:layout_height="32dp"/>
+                    android:layout_width="30dp" android:layout_height="30dp"/>
                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                     android:text="7d" android:textSize="9sp" android:textColor="#8E8E93"
                     android:layout_marginTop="2dp" android:gravity="center"/>
             </LinearLayout>
+
             <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:orientation="vertical" android:gravity="center" android:layout_marginStart="3dp">
                 <com.habittracker.app.RadialProgressView android:id="@+id/p4w"
-                    android:layout_width="32dp" android:layout_height="32dp"/>
+                    android:layout_width="30dp" android:layout_height="30dp"/>
                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                     android:text="4w" android:textSize="9sp" android:textColor="#8E8E93"
                     android:layout_marginTop="2dp" android:gravity="center"/>
             </LinearLayout>
+
             <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:orientation="vertical" android:gravity="center" android:layout_marginStart="3dp">
                 <com.habittracker.app.RadialProgressView android:id="@+id/p3m"
-                    android:layout_width="32dp" android:layout_height="32dp"/>
+                    android:layout_width="30dp" android:layout_height="30dp"/>
                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                     android:text="3m" android:textSize="9sp" android:textColor="#8E8E93"
                     android:layout_marginTop="2dp" android:gravity="center"/>
             </LinearLayout>
+
             <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:orientation="vertical" android:gravity="center" android:layout_marginStart="3dp">
                 <com.habittracker.app.RadialProgressView android:id="@+id/p1y"
-                    android:layout_width="32dp" android:layout_height="32dp"/>
+                    android:layout_width="30dp" android:layout_height="30dp"/>
                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                     android:text="1y" android:textSize="9sp" android:textColor="#8E8E93"
                     android:layout_marginTop="2dp" android:gravity="center"/>
